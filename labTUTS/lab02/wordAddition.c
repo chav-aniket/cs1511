@@ -1,0 +1,185 @@
+//Made by Aniket Chavan; z5265106
+//Created on the 27th February, 2019
+//Designed to take an ipnut of an age
+// and output the dating range of that individual
+// in accordance to our algorithm
+
+#include <stdio.h>
+
+int digOne;
+int digTwo;
+int res;
+
+int printFirstDig(digOne) {
+  
+    if (digOne == 1) {
+        printf("one");
+    } else if (digOne == 2) {
+        printf("two");
+    } else if (digOne == 3) {
+        printf("three");
+    } else if (digOne == 4) {
+        printf("four");
+    } else if (digOne == 5) {
+        printf("five");
+    } else if (digOne == 6) {
+        printf("six");
+    } else if (digOne == 7) {
+        printf("seven");
+    } else if (digOne == 8) {
+        printf("eight");
+    } else if (digOne == 9) {
+        printf("nine");
+    } else if (digOne == 10) {
+        printf("ten");
+    } else if (digOne > 10) {
+        printf("%d", digOne);
+    } 
+    // Negative Numbers
+    else if (digOne == -1) {
+        printf("negative one");
+    } else if (digOne == -2) {
+        printf("negative two");
+    } else if (digOne == -3) {
+        printf("negative three");
+    } else if (digOne == -4) {
+        printf("negative four");
+    } else if (digOne == -5) {
+        printf("negative five");
+    } else if (digOne == -6) {
+        printf("negative six");
+    } else if (digOne == -7) {
+        printf("negative seven");
+    } else if (digOne == -8) {
+        printf("negative eight");
+    } else if (digOne == -9) {
+        printf("negative nine");
+    } else if (digOne == -10) {
+        printf("negative ten");
+    } else if (digOne < -10) {
+        printf("%d", digOne);
+    }
+    
+    return 0;
+}
+
+int printSecondDig(digTwo) {
+    
+    if (digTwo == 1) {
+        printf("one");
+    } else if (digTwo == 2) {
+        printf("two");
+    } else if (digTwo == 3) {
+        printf("three");
+    } else if (digTwo == 4) {
+        printf("four");
+    } else if (digTwo == 5) {
+        printf("five");
+    } else if (digTwo == 6) {
+        printf("six");
+    } else if (digTwo == 7) {
+        printf("seven");
+    } else if (digTwo == 8) {
+        printf("eight");
+    } else if (digTwo == 9) {
+        printf("nine");
+    } else if (digTwo == 10) {
+        printf("ten");
+    } else if (digTwo > 10) {
+        printf("%d", digTwo);
+    } 
+    // Negative Numbers
+    else if (digTwo == -1) {
+        printf("negative one");
+    } else if (digTwo == -2) {
+        printf("negative two");
+    } else if (digTwo == -3) {
+        printf("negative three");
+    } else if (digTwo == -4) {
+        printf("negative four");
+    } else if (digTwo == -5) {
+        printf("negative five");
+    } else if (digTwo == -6) {
+        printf("negative six");
+    } else if (digTwo == -7) {
+        printf("negative seven");
+    } else if (digTwo == -8) {
+        printf("negative eight");
+    } else if (digTwo == -9) {
+        printf("negative nine");
+    } else if (digTwo == -10) {
+        printf("negative ten");
+    } else if (digTwo < -10) {
+        printf("%d", digTwo);
+    }
+    
+    return 0;
+}
+
+int printRes(res) {
+    
+    if (res == 1) {
+        printf("one");
+    } else if (res == 2) {
+        printf("two\n");
+    } else if (res == 3) {
+        printf("three\n");
+    } else if (res == 4) {
+        printf("four\n");
+    } else if (res == 5) {
+        printf("five\n");
+    } else if (res == 6) {
+        printf("six\n");
+    } else if (res == 7) {
+        printf("seven\n");
+    } else if (res == 8) {
+        printf("eight\n");
+    } else if (res == 9) {
+        printf("nine\n");
+    } else if (res == 10) {
+        printf("ten\n");
+    } else if (res > 10) {
+        printf("%d\n", res);
+    } 
+    // Negative Numbers
+    else if (res == -1) {
+        printf("negative one\n");
+    } else if (res == -2) {
+        printf("negative two\n");
+    } else if (res == -3) {
+        printf("negative three\n");
+    } else if (res == -4) {
+        printf("negative four\n");
+    } else if (res == -5) {
+        printf("negative five\n");
+    } else if (res == -6) {
+        printf("negative six\n");
+    } else if (res == -7) {
+        printf("negative seven\n");
+    } else if (res == -8) {
+        printf("negative eight\n");
+    } else if (res == -9) {
+        printf("negative nine\n");
+    } else if (res == -10) {
+        printf("negative ten\n");
+    } else if (res < -10) {
+        printf("%d\n", res);
+    }
+    
+    return 0;
+}
+
+int main(void) {
+    printf("Please enter two integers: ");
+    scanf("%d %d",&digOne, &digTwo);
+    
+    res = digOne + digTwo;
+    //printf("%d, %d, %d", digOne, digTwo, res);
+    printFirstDig(digOne);
+    printf(" + ");
+    printSecondDig(digTwo);
+    printf(" = ");
+    printRes(res);
+    
+    return 0;
+}

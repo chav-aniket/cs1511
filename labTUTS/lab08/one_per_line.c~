@@ -1,0 +1,17 @@
+//Made by Aniket Chavan on the 12-04-19
+//contact information: (z5265106) (chavaniket@outlook.com)
+//Takes a string input and print out one character per line
+
+#include <stdio.h>
+#define MAX_CHAR 4096
+
+int main(void) {
+    printf("Enter a string: ");
+    int c = getchar();
+    while () {
+        putchar(c);
+        putchar('\n');
+        c = getchar();
+    }
+    return 0;
+}

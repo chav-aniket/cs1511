@@ -1,0 +1,76 @@
+//Made by Aniket Chavan (z5265106) (chavaniket@outlook.com)
+//Made on 16-04-19
+//Reads standard input until EOF and returns integer with highest frequency
+
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX_ARRAY 100000
+
+int remove_duplicates (int source[MAX_ARRAY], int destination[MAX_ARRAY]);
+int returnFreq(int number, int array[]);
+int findMax(int length,int input[MAX_ARRAY],int noDupInput[length]);
+
+int main (void) {
+    int input[MAX_ARRAY] = {0};
+    int noDupInput[MAX_ARRAY] = {0};
+    int i = 0;
+    while (i < MAX_ARRAY) {
+        scanf("%d",&input[i]);
+        if (input[i] == -1) {
+            break;
+        }
+        i++;
+    }
+    
+    int len = remove_duplicates(input,noDupInput);
+    printf("%d\n",findMax(len,input,noDupInput));
+    return 0;
+}
+
+int remove_duplicates (int source[MAX_ARRAY], int destination[MAX_ARRAY]) {
+    int isDuplicate = 0;
+    int count = 0;
+    int k = 0;
+    
+    for (int i = 0;i < MAX_ARRAY && source[i] != 0;i++) {
+        isDuplicate = 0;
+        for (int j = 0;j < MAX_ARRAY;j++) {
+            if (source[i] == destination[j] && destination[j] != 0) {
+                isDuplicate = 1;
+                count++;
+                break;
+            }
+        }
+        if (!isDuplicate) {
+            destination[k] = source[i];
+            k++;
+        }
+    }
+    return k;
+}
+
+int returnFreq(int number, int array[]) {
+    int counter = 0;
+    for (int i = 0;i < MAX_ARRAY && array[i] != 0;i++) {
+        if (array[i] == number) {
+            counter++;
+        }
+    }
+    return counter;
+}
+
+int findMax(int length,int input[MAX_ARRAY],int noDupInput[MAX_ARRAY]) {
+    int maxFreq = 0;
+    int mostFreq = 0;
+    for (int i = length;i >= 0;i--) {
+        if (returnFreq(noDupInput[i],input) > maxFreq && noDupInput[i] != 0) {
+            maxFreq = returnFreq(noDupInput[i],input);
+            mostFreq = noDupInput[i];
+        } else if (returnFreq(noDupInput[i],input) == maxFreq) {
+            if (noDupInput[i] > mostFreq) {
+                mostFreq = noDupInput[i];
+            }
+        }
+    }
+    return mostFreq;
+}

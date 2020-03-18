@@ -1,0 +1,16 @@
+// A simple C program that prints a bird
+// Written 22/02/19
+// by Aniket Chavan
+// for COMP1511 Lab 01 Exercise 1
+
+#include <stdio.h>
+
+int main(void) {
+
+    printf("  ___  \n");
+    printf(" ('v') \n");
+    printf("((___))\n");
+    printf(" ^   ^ \n");
+
+    return 0;
+}

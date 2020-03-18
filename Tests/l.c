@@ -1,0 +1,15 @@
+//Made by Aniket Chavan (chavaniket@outlook.com)
+//Created on the 18th of March 2019
+//Takes a size input to print out an n tall and n long "L"
+
+#include <stdio.h>
+
+int main(void) {
+    int size;
+    printf("Enter size: ");
+    scanf("%d", &size);
+    
+    
+
+    
+}
